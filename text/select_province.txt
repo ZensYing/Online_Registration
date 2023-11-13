@@ -1,0 +1,60 @@
+ <div class="container mx-auto px-4 py-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-red-900 text-white p-4 rounded">
+                        <label for="province" class="block mb-2 font-medium text-white-500 text-2xl"> <ion-icon name="location-outline"></ion-icon> Province</label>
+                        <div class="relative">
+                            <select id="province" name="province" class="block w-full py-2 pl-3 pr-10 text-gray-700 bg-white border border-gray-300 rounded-lg appearance-none focus:outline-none focus:border-indigo-500">
+                                <option selected disabled>Select Province</option>
+                                <?php while ($row = mysqli_fetch_assoc($province_qry)) : ?>
+                                    <option value="<?php echo $row['id']; ?>"><?php echo $row['khmer_name']; ?></option>
+                                <?php endwhile; ?>
+                            </select>
+                            <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                <svg class="w-4 h-4 fill-current text-gray-500" viewBox="0 0 20 20">
+                                    <path d="M10 12l-6-6h12l-6 6z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-green-900 text-white p-4 rounded">
+                        <label for="district" class="block mb-2 font-medium text-white-500 text-2xl"><ion-icon name="location-outline"></ion-icon> District</label>
+                        <div class="relative">
+                            <select id="district" name="district" class="block w-full py-2 pl-3 pr-10 text-gray-700 bg-white border border-gray-300 rounded-lg appearance-none focus:outline-none focus:border-indigo-500">
+                                <option value="">Select District</option>
+                            </select>
+                            <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                <svg class="w-4 h-4 fill-current text-gray-500" viewBox="0 0 20 20">
+                                    <path d="M10 12l-6-6h12l-6 6z" />
+                                </svg>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="bg-yellow-900 text-white p-4 rounded">
+                        <label for="commune" class="block mb-2 font-medium text-white-500 text-2xl"><ion-icon name="location-outline"></ion-icon> Commune</label>
+                        <div class="relative">
+                            <select id="commune" name="commune" class="block w-full py-2 pl-3 pr-10 text-gray-700 bg-white border border-gray-300 rounded-lg appearance-none focus:outline-none focus:border-indigo-500">
+                                <option value="">Select Commune</option>
+                            </select>
+                            <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                <svg class="w-4 h-4 fill-current text-gray-500" viewBox="0 0 20 20">
+                                    <path d="M10 12l-6-6h12l-6 6z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-red-700 text-white p-4 rounded">
+                        <label for="village" class="block mb-2 font-medium text-white-500 text-2xl"><ion-icon name="location-outline"></ion-icon> Village</label>
+                        <div class="relative">
+                            <select id="village" name="village" class="block w-full py-2 pl-3 pr-10 text-gray-700 bg-white border border-gray-300 rounded-lg appearance-none focus:outline-none focus:border-indigo-500">
+                                <option value="">Select Village</option>
+                            </select>
+                            <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                <svg class="w-4 h-4 fill-current text-gray-500" viewBox="0 0 20 20">
+                                    <path d="M10 12l-6-6h12l-6 6z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>

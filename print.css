@@ -1,0 +1,11 @@
+@media print {
+    body * {
+        display: none; /* Hide all elements by default */
+    }
+
+    .print-content {
+        display: block; /* Show the specific content you want to print */
+    }
+
+    /* Additional styling for print layout */
+    }
